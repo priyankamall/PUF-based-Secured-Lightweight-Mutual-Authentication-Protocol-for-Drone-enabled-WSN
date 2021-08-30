@@ -26,7 +26,7 @@ var RMj, Rj: Nonce;
 recv_!1(SensorNode, Drone, IDsj, Aj, Bj, Tj);
 macro L = H(IDd, Kd, RMd, Td);
 macro N = XOR(RMd, H(IDcs, Kd));
-send_!2(Drone, CloudServer, IDd, L, N, Td);#Sensor node sends parameters to the relocatable base station (drones)
+send_!2(Drone, CloudServer, IDd, L, N, Td);#Drone sends parameters to the cloud server
 recv_!3(CloudServer, Drone, P, Q, V, Tcs); 
 macro SKes-d' = XOR(V, H(IDd, Kd, Tcs));  
 macro Rcs' = XOR(P, H(IDd, RMd));
