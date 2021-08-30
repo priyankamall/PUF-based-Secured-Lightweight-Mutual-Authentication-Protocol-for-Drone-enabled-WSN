@@ -47,7 +47,7 @@ recv_!1(User, CloudServer, IDi,Updi,UCi);
 fresh URi,CRi: Nonce; 
 macro UAi= XOR(H(IDcs, SN, UCi), H(IDi,Updi,CRi)); 
 send_!2(CloudServer,User,URi,UAi,CRi); #Cloud server sends parameters to the user
-recv_!3(User,CloudServer,IDi,UCi,ULi,UNi,Tui); 
+recv_!3(User,CloudServer,IDi,UCi,ULi,UNi,Tui); #User receives parameters from the cloud server
 fresh URi'':Nonce; 
 macro RAN''= XOR(UNi, H(IDcs,URi''));
 macro UKi''= H(IDcs, SN, UCi); 
@@ -56,7 +56,7 @@ fresh RANcs,SKu-cs:Nonce;
 macro UQ= XOR(SKu-cs, H(IDi,URi,RAN''));
 macro UP= {RANcs}SKu-cs; 
 macro UW= XOR(RANcs,RAN''); 
-send_!4(CloudServer,User, UQ,UP,UW,Tcs); 
+send_!4(CloudServer,User, UQ,UP,UW,Tcs); #Cloud server sends parameters to the user
 claim(CloudServer,Niagree); 
 claim(CloudServer,Nisynch); 
 claim(CloudServer,Secret,RANcs);
