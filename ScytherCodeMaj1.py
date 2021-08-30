@@ -51,7 +51,7 @@ claim (Drone,Secret, SKes-d);
 role CloudServer
 {
 const Sc; 
-recv_!2(Drone, CloudServer, IDd, L, N, Td ); 
+recv_!2(Drone, CloudServer, IDd, L, N, Td ); #drone receives parameters from the cloud server
 const IDcs; 
 fresh Rcs: Nonce; 
 fresh SKes-d: Nonce;
