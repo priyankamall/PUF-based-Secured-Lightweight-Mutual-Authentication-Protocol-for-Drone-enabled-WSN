@@ -23,7 +23,7 @@ macro CRi'= XOR(UEi, H(IDi',Pdi'));
 macro UKi= XOR(UAi,H(IDi',Updi',CRi')); 
 macro ULi= H(IDi,UKi,CRi',RAN,Tui,URi'); 
 macro UNi= XOR(RAN, H(IDcs,URi'));
-send_!3(User,CloudServer,IDi,UCi,ULi,UNi,Tui); 
+send_!3(User,CloudServer,IDi,UCi,ULi,UNi,Tui); #User sends parameters to the cloud server
 recv_!4(CloudServer,User, UQ,UP,UW,Tcs); 
 macro SKu-cs''=XOR(UQ,H(IDi,URi,RAN)); 
 macro RANcs''= XOR(UW,RAN);
