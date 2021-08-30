@@ -1,4 +1,4 @@
-protocol Major1(SensorNode, Drone, Cloud)
+protocol Major1(SensorNode, Drone, CloudServer)
 {
 role SensorNode 
 {
@@ -26,8 +26,8 @@ var RMj, Rj: Nonce;
 recv_!1(SensorNode, Drone, IDsj, Aj, Bj, Tj);
 macro L = H(IDd, Kd, RMd, Td);
 macro N = XOR(RMd, H(IDcs, Kd));
-send_!2(Drone, Cloud, IDd, L, N, Td);
-recv_!3(Cloud, Drone, P, Q, V, Tcs); 
+send_!2(Drone, CloudServer, IDd, L, N, Td);
+recv_!3(CloudServer, Drone, P, Q, V, Tcs); 
 macro SKes-d' = XOR(V, H(IDd, Kd, Tcs));  
 macro Rcs' = XOR(P, H(IDd, RMd));
 macro Q' = H(IDd, IDcs, Rcs', SKes-d', Tcs);
@@ -48,10 +48,10 @@ claim(Drone,Secret, RMd);
 claim (Drone,Secret, SKs-d);
 claim (Drone,Secret, SKes-d); 
 }
-role Cloud
+role CloudServer
 {
 const Sc; 
-recv_!2(Drone, Cloud, IDd, L, N, Td ); 
+recv_!2(Drone, CloudServer, IDd, L, N, Td ); 
 const IDcs; 
 fresh Rcs: Nonce; 
 fresh SKes-d: Nonce;
@@ -62,10 +62,10 @@ match (L', L);
 macro P = XOR(Rcs, H(IDd, RMd')); 
 macro V = XOR(SKes-d, H(IDd, Kd', Tcs));
 macro Q = H(IDd, IDcs, Rcs, SKes-d, Tcs); 
-send_!3(Cloud, Drone, P,Q,V,Tcs); 
-claim(Cloud, Niagree); 
-claim (Cloud, Nisynch); 
-claim(Cloud,Secret, Rcs); 
-claim_Cloud(Cloud,Secret, SKes-d); 
+send_!3(CloudServer, Drone, P,Q,V,Tcs); 
+claim(CloudServer, Niagree); 
+claim (CloudServer, Nisynch); 
+claim(CloudServer,Secret, Rcs); 
+claim_CloudServer(CloudServer,Secret, SKes-d); 
 }
 }
