@@ -7,8 +7,8 @@ var URi,CRi: Nonce;
 var URi'':Nonce;
 var RANcs,SKu-cs:Nonce; 
 macro Updi = H(Pdi, Rui); 
-send_!1(User,CloudServer, IDi,Updi,UCi);
-recv_!2(CloudServer,User,URi,UAi,CRi); 
+send_!1(User,CloudServer, IDi,Updi,UCi);#User sends parameters to the cloud server
+recv_!2(CloudServer,User,URi,UAi,CRi); #Cloud server receives parameters from the user
 macro UDi= XOR(URi,Pdi);
 macro UEi= XOR(CRi, H(IDi,Pdi));
 macro UFi= XOR(Rui, H(XOR(IDi, Pdi,UCi))); 
