@@ -62,7 +62,7 @@ match (L', L);
 macro P = XOR(Rcs, H(IDd, RMd')); 
 macro V = XOR(SKes-d, H(IDd, Kd', Tcs));
 macro Q = H(IDd, IDcs, Rcs, SKes-d, Tcs); 
-send_!3(CloudServer, Drone, P,Q,V,Tcs); 
+send_!3(CloudServer, Drone, P,Q,V,Tcs); #cloud server sends parameters to the drone
 claim(CloudServer, Niagree); 
 claim (CloudServer, Nisynch); 
 claim(CloudServer,Secret, Rcs); 
