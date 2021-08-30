@@ -1,29 +1,29 @@
-protocol Major1(Sensor, Drone, Cloud)
+protocol Major1(SensorNode, Drone, Cloud)
 {
-role Sensor 
+role SensorNode 
 {
 const IDs; 
 fresh RMj,Rj,SKs-d: Nonce;
 macro Aj = H(IDsj, IDd, Rj, RMj, Tj);
 macro Bj = XOR( RMj, H(IDsj, Rj, Tj));
-send_!1(Sensor, Drone, IDsj, Aj, Bj, Tj); 
+send_!1(SensorNode, Drone, IDsj, Aj, Bj, Tj); 
 recv_!4(Drone, Sensor, IDd, Cd, Ed, Fd); 
 macro Rd' = XOR(Fd, H(IDsj, LRj'));
 macro SKs-d' = XOR(Ed, H(IDsj, RRj'));
 macro Cd' = H(IDd, IDsj, Rd', SKs-d'); 
 match(Cd', Cd); 
-claim(Sensor, Niagree); 
-claim(Sensor, Nisynch); 
-claim(Sensor,Secret, RMj);  
-claim(Sensor,Secret, Rj); 
-claim(Sensor,Secret, SKs-d); 
+claim(SensorNode, Niagree); 
+claim(SensorNode, Nisynch); 
+claim(SensorNode,Secret, RMj);  
+claim(SensorNode,Secret, Rj); 
+claim(SensorNode,Secret, SKs-d); 
 }
 role Drone
 {
 const IDd;
 fresh RMd,SKes-d: Nonce;
 var RMj, Rj: Nonce;
-recv_!1(Sensor, Drone, IDsj, Aj, Bj, Tj);
+recv_!1(SensorNode, Drone, IDsj, Aj, Bj, Tj);
 macro L = H(IDd, Kd, RMd, Td);
 macro N = XOR(RMd, H(IDcs, Kd));
 send_!2(Drone, Cloud, IDd, L, N, Td);
@@ -33,15 +33,15 @@ macro Rcs' = XOR(P, H(IDd, RMd));
 macro Q' = H(IDd, IDcs, Rcs', SKes-d', Tcs);
 match (Q,Q'); 
 macro RMj' = XOR(Bj, H(IDsj, Rj', Tj)); 
-macro Aj' =H(IDsj, IDd, Rj', RMj, Tj); 
+macro Aj' = H(IDsj, IDd, Rj', RMj, Tj); 
 match (Aj',Aj);
 fresh Rd: Nonce;
 fresh SKs-d: Nonce;
 macro Cd = H(IDd, IDsj, Rd, SKs-d, LRj); 
 macro Ed = XOR(SKs-d, H(IDsj, RRj));
 macro Fd = XOR(Rd, H(IDsj, LRj));
-send_!4(Drone, Sensor, IDd, Cd, Ed, Fd); 
-claim(Sensor, Niagree);
+send_!4(Drone, SensorNode, IDd, Cd, Ed, Fd); 
+claim(SensorNode, Niagree);
 claim (Drone, Nisynch);
 claim(Drone,Secret, Rd);
 claim(Drone,Secret, RMd); 
