@@ -6,8 +6,8 @@ const IDs;
 fresh RMj,Rj,SKs-d: Nonce;
 macro Aj = H(IDsj, IDd, Rj, RMj, Tj);
 macro Bj = XOR( RMj, H(IDsj, Rj, Tj));
-send_!1(SensorNode, Drone, IDsj, Aj, Bj, Tj); 
-recv_!4(Drone, Sensor, IDd, Cd, Ed, Fd); 
+send_!1(SensorNode, Drone, IDsj, Aj, Bj, Tj); #Sensor node sends parameters to the relocatable base station (drones)
+recv_!4(Drone, Sensor, IDd, Cd, Ed, Fd); #Drone receives parameters from the sensor node
 macro Rd' = XOR(Fd, H(IDsj, LRj'));
 macro SKs-d' = XOR(Ed, H(IDsj, RRj'));
 macro Cd' = H(IDd, IDsj, Rd', SKs-d'); 
