@@ -61,7 +61,7 @@ macro UP= {RANcs}SKu-cs;
 macro UW= XOR(RANcs,RAN''); 
 send_!4(CloudServer,User, UQ,UP,UW,Tcs); #Cloud server sends parameters to the user
 claim(CloudServer,Niagree); 
-claim(CloudServer,Nisynch); 
+claim(CloudServer,Nisynch); #check non-injective synchronization
 claim(CloudServer,Secret,RANcs);
 claim(CloudServer,Secret,SKu-cs); 
 }
