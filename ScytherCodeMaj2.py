@@ -2,7 +2,7 @@ protocol Major2(User,CloudServer)
 { 
 role User
 { 
-fresh Rui,UCi: Nonce;
+fresh Rui,UCi: Nonce;#UCi Challenges
 var URi,CRi: Nonce; 
 var URi'':Nonce;
 var RANcs,SKu-cs:Nonce; 
