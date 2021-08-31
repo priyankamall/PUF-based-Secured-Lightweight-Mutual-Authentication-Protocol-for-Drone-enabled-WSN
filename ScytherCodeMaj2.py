@@ -35,7 +35,7 @@ claim(User, Niagree); #check non-injective agreement
 claim(User, Nisynch); #check non-injective synchronization
 claim(User,Secret,Rui); 
 claim(User,Secret,UCi); 
-claim(User,Secret,RAN); 
+claim(User,Secret,RAN);#verify the random number secrecy 
 claim(User,Secret,Pdi); 
 claim(User,Secret,SKu-cs''); 
 }
