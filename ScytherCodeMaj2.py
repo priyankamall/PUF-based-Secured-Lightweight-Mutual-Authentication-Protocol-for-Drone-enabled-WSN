@@ -62,7 +62,7 @@ macro UW= XOR(RANcs,RAN'');
 send_!4(CloudServer,User, UQ,UP,UW,Tcs); #Cloud server sends parameters to the user
 claim(CloudServer,Niagree); #check non-injective agreement
 claim(CloudServer,Nisynch); #check non-injective synchronization
-claim(CloudServer,Secret,RANcs);
+claim(CloudServer,Secret,RANcs);#random number secrecy
 claim(CloudServer,Secret,SKu-cs); 
 }
 }
