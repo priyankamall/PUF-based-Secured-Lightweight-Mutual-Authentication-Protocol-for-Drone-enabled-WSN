@@ -30,7 +30,7 @@ send_!3(User,CloudServer,IDi,UCi,ULi,UNi,Tui); #User sends parameters to the clo
 recv_!4(CloudServer,User, UQ,UP,UW,Tcs); #Cloud server receives parameters from the user
 macro SKu-cs''=XOR(UQ,H(IDi,URi,RAN)); 
 macro RANcs''= XOR(UW,RAN);
-macro RANcs'= {UP}SKu-cs''; 
+macro RANcs'= {UP}SKu-cs''; #decryption
 claim(User, Niagree); #check non-injective agreement
 claim(User, Nisynch); #check non-injective synchronization
 claim(User,Secret,Rui); 
