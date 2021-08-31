@@ -3,7 +3,7 @@ protocol Major2(User,CloudServer)
 role User
 { 
 fresh Rui,UCi: Nonce;#UCi Challenges
-var URi,CRi: Nonce; 
+var URi,CRi: Nonce; #CRi random number
 var URi'':Nonce;
 var RANcs,SKu-cs:Nonce; 
 macro Updi = H(Pdi, Rui); 
