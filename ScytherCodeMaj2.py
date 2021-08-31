@@ -63,6 +63,6 @@ send_!4(CloudServer,User, UQ,UP,UW,Tcs); #Cloud server sends parameters to the u
 claim(CloudServer,Niagree); #check non-injective agreement
 claim(CloudServer,Nisynch); #check non-injective synchronization
 claim(CloudServer,Secret,RANcs);#random number secrecy
-claim(CloudServer,Secret,SKu-cs); 
+claim(CloudServer,Secret,SKu-cs); #session key secrecy
 }
 }
