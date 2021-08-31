@@ -32,7 +32,7 @@ macro SKu-cs''=XOR(UQ,H(IDi,URi,RAN));
 macro RANcs''= XOR(UW,RAN);
 macro RANcs'= {UP}SKu-cs''; 
 claim(User, Niagree); #check non-injective agreement
-claim(User, Nisynch); 
+claim(User, Nisynch); #check non-injective synchronization
 claim(User,Secret,Rui); 
 claim(User,Secret,UCi); 
 claim(User,Secret,RAN); 
