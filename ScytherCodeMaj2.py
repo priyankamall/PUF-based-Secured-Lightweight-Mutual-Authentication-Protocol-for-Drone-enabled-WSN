@@ -57,7 +57,7 @@ macro UKi''= H(IDcs, SN, UCi);
 macro ULi'= H(IDi'',UKi'',CRi, RAN'', Tui'', URi''); 
 fresh RANcs,SKu-cs:Nonce; 
 macro UQ= XOR(SKu-cs, H(IDi,URi,RAN''));
-macro UP= {RANcs}SKu-cs; 
+macro UP= {RANcs}SKu-cs; #encyption process of the session key
 macro UW= XOR(RANcs,RAN''); 
 send_!4(CloudServer,User, UQ,UP,UW,Tcs); #Cloud server sends parameters to the user
 claim(CloudServer,Niagree); #check non-injective agreement
