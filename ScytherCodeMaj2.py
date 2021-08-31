@@ -37,7 +37,7 @@ claim(User,Secret,Rui);
 claim(User,Secret,UCi); 
 claim(User,Secret,RAN);#verify the random number secrecy 
 claim(User,Secret,Pdi); 
-claim(User,Secret,SKu-cs''); 
+claim(User,Secret,SKu-cs''); #session key secrecy verification
 }
 
 role CloudServer 
