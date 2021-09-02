@@ -9,7 +9,7 @@ protocol Major1(SensorNode, Drone, CloudServer)
 role SensorNode 
 {
 const IDs; #sensor node identity
-fresh RMj,Rj,SKs-d: Nonce;
+fresh RMj,Rj,SKs-d: Nonce;#randomly chosen values
 macro Aj = H(IDsj, IDd, Rj, RMj, Tj);
 macro Bj = XOR( RMj, H(IDsj, Rj, Tj));
 send_!1(SensorNode, Drone, IDsj, Aj, Bj, Tj); #Sensor node sends parameters to the relocatable base station (drones)
