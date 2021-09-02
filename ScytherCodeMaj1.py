@@ -1,4 +1,5 @@
 usertype Timestamp, PUF, SK;#SK is the secret key
+hashfunction H;
 protocol Major1(SensorNode, Drone, CloudServer)
 {
 role SensorNode 
