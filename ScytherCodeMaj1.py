@@ -40,7 +40,7 @@ macro Q' = H(IDd, IDcs, Rcs', SKes-d', Tcs);
 match (Q,Q'); 
 macro RMj' = XOR(Bj, H(IDsj, Rj', Tj)); 
 macro Aj' = H(IDsj, IDd, Rj', RMj, Tj); 
-match (Aj',Aj);
+match (Aj',Aj); #If the condition is true then the Sensor node is verified
 fresh Rd: Nonce;
 fresh SKs-d: Nonce;
 macro Cd = H(IDd, IDsj, Rd, SKs-d, LRj); 
