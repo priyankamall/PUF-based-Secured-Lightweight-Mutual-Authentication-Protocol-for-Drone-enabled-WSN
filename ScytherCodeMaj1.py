@@ -26,7 +26,7 @@ claim(SensorNode,Secret, SKs-d); #sensor node and drone's common key secrecy
 }
 role Drone
 {
-const IDd;
+const IDd;#identity of drone
 fresh RMd,SKes-d: Nonce;
 var RMj, Rj: Nonce;
 recv_!1(SensorNode, Drone, IDsj, Aj, Bj, Tj); #sensor node receives parameters from the drone
