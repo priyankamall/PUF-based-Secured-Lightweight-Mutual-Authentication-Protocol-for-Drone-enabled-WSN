@@ -59,7 +59,7 @@ role CloudServer
 const Sc; #cloud server identity
 recv_!2(Drone, CloudServer, IDd, L, N, Td ); #drone receives parameters from the cloud server
 const IDcs; 
-fresh Rcs: Nonce; 
+fresh Rcs: Nonce; #random number
 fresh SKes-d: Nonce;
 macro kd' = H(IDd, IDcs, SN, T); 
 macro RMd' = XOR(N, H(IDcs, Kd')); 
