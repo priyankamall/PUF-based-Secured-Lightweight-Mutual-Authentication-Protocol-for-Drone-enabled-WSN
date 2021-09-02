@@ -60,7 +60,7 @@ const Sc; #cloud server identity
 recv_!2(Drone, CloudServer, IDd, L, N, Td ); #drone receives parameters from the cloud server
 const IDcs; 
 fresh Rcs: Nonce; #random number
-fresh SKes-d: Nonce;
+fresh SKes-d: Nonce;#SKes-d is randomly chosen
 macro kd' = H(IDd, IDcs, SN, T); 
 macro RMd' = XOR(N, H(IDcs, Kd')); 
 macro L' = H(IDd, Kd', RMd', Td);
