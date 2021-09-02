@@ -1,5 +1,9 @@
 usertype Timestamp, PUF, SK;#SK is the secret key
 hashfunction H;
+const IDd, IDs, IDcs, SN, T, Kd, Aj, Bj, Tj, IDsj, Cj, 
+L,N, Td, Tcs, Kd', RMd', RMd, L', P, U, Q, Q', SKes-d',
+RMj', Rj', Cd, Ed, Fd, LRj,LRj', RRj,RRj', Rd', SKs-d', Cd',V ;
+const ADD:Function;
 protocol Major1(SensorNode, Drone, CloudServer)
 {
 role SensorNode 
