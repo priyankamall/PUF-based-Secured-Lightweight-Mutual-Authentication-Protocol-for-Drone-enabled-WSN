@@ -1,4 +1,4 @@
-usertype Timestamp, OUF, SK;
+usertype Timestamp, PUF, SK;#SK is the secret key
 protocol Major1(SensorNode, Drone, CloudServer)
 {
 role SensorNode 
