@@ -52,7 +52,7 @@ claim (Drone, Nisynch);#Non-injective synchronization
 claim(Drone,Secret, Rd);
 claim(Drone,Secret, RMd); 
 claim (Drone,Secret, SKs-d);
-claim (Drone,Secret, SKes-d); 
+claim (Drone,Secret, SKes-d); # Checks whether the common key SKes-d is secret
 }
 role CloudServer
 {
