@@ -17,7 +17,7 @@ recv_!4(Drone, Sensor, IDd, Cd, Ed, Fd); #Drone receives parameters from the sen
 macro Rd' = XOR(Fd, H(IDsj, LRj'));
 macro SKs-d' = XOR(Ed, H(IDsj, RRj'));
 macro Cd' = H(IDd, IDsj, Rd', SKs-d'); 
-match(Cd', Cd); 
+match(Cd', Cd); #if the values matches then the Drone is authenticated to the Sensor node
 claim(SensorNode, Niagree); #non-injective agreement
 claim(SensorNode, Nisynch); #Non-injective synchronization
 claim(SensorNode,Secret, RMj);  
