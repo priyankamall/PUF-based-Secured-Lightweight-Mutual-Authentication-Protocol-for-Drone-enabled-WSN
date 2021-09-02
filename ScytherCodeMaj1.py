@@ -8,7 +8,7 @@ protocol Major1(SensorNode, Drone, CloudServer)
 {
 role SensorNode 
 {
-const IDs; 
+const IDs; #sensor node identity
 fresh RMj,Rj,SKs-d: Nonce;
 macro Aj = H(IDsj, IDd, Rj, RMj, Tj);
 macro Bj = XOR( RMj, H(IDsj, Rj, Tj));
