@@ -18,7 +18,7 @@ macro Rd' = XOR(Fd, H(IDsj, LRj'));
 macro SKs-d' = XOR(Ed, H(IDsj, RRj'));
 macro Cd' = H(IDd, IDsj, Rd', SKs-d'); 
 match(Cd', Cd); 
-claim(SensorNode, Niagree); 
+claim(SensorNode, Niagree); #non-injective agreement
 claim(SensorNode, Nisynch); 
 claim(SensorNode,Secret, RMj);  
 claim(SensorNode,Secret, Rj); 
