@@ -19,7 +19,7 @@ macro SKs-d' = XOR(Ed, H(IDsj, RRj'));
 macro Cd' = H(IDd, IDsj, Rd', SKs-d'); 
 match(Cd', Cd); 
 claim(SensorNode, Niagree); #non-injective agreement
-claim(SensorNode, Nisynch); 
+claim(SensorNode, Nisynch); #Non-injective synchronization
 claim(SensorNode,Secret, RMj);  
 claim(SensorNode,Secret, Rj); 
 claim(SensorNode,Secret, SKs-d); #sensor node and drone's common key secrecy
