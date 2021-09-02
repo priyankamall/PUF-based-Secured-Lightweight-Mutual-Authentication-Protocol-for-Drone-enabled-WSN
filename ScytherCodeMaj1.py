@@ -22,7 +22,7 @@ claim(SensorNode, Niagree);
 claim(SensorNode, Nisynch); 
 claim(SensorNode,Secret, RMj);  
 claim(SensorNode,Secret, Rj); 
-claim(SensorNode,Secret, SKs-d); 
+claim(SensorNode,Secret, SKs-d); #sensor node and drone's common key secrecy
 }
 role Drone
 {
