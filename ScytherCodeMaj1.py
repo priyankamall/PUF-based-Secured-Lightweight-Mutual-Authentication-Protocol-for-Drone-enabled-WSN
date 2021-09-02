@@ -37,7 +37,7 @@ recv_!3(CloudServer, Drone, P, Q, V, Tcs); #Cloud server receives parameters fro
 macro SKes-d' = XOR(V, H(IDd, Kd, Tcs));  
 macro Rcs' = XOR(P, H(IDd, RMd));
 macro Q' = H(IDd, IDcs, Rcs', SKes-d', Tcs);
-match (Q,Q'); 
+match (Q,Q'); #If the condition is true then the Cloud Server is authenticated and SKes-d is verified
 macro RMj' = XOR(Bj, H(IDsj, Rj', Tj)); 
 macro Aj' = H(IDsj, IDd, Rj', RMj, Tj); 
 match (Aj',Aj); #If the condition is true then the Sensor node is verified
