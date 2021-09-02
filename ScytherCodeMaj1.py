@@ -1,3 +1,4 @@
+usertype Timestamp, OUF, SK;
 protocol Major1(SensorNode, Drone, CloudServer)
 {
 role SensorNode 
