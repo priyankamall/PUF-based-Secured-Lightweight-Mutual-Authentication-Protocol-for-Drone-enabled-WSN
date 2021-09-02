@@ -56,7 +56,7 @@ claim (Drone,Secret, SKes-d); # Checks whether the common key SKes-d is secret
 }
 role CloudServer
 {
-const Sc; 
+const Sc; #cloud server identity
 recv_!2(Drone, CloudServer, IDd, L, N, Td ); #drone receives parameters from the cloud server
 const IDcs; 
 fresh Rcs: Nonce; 
