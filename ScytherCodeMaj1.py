@@ -47,7 +47,7 @@ macro Cd = H(IDd, IDsj, Rd, SKs-d, LRj);
 macro Ed = XOR(SKs-d, H(IDsj, RRj));
 macro Fd = XOR(Rd, H(IDsj, LRj));
 send_!4(Drone, SensorNode, IDd, Cd, Ed, Fd); #Drone sends parameters to the sensor node
-claim(SensorNode, Niagree);
+claim(SensorNode, Niagree); #non-injective agreement
 claim (Drone, Nisynch);
 claim(Drone,Secret, Rd);
 claim(Drone,Secret, RMd); 
