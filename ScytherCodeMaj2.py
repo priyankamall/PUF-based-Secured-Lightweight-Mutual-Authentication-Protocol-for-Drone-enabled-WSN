@@ -1,3 +1,11 @@
+usertype Timestamp,PUF,SK; 
+hashfunction H;
+const XOR:Function;
+const ADD:Function;
+const MUL:Function;
+const GEN:Function;
+const IDi, Pdi, Updi, Tcs,UAi, IDcs, SN, Udi, UEi, UFi, UGi, IDi', Pdi', Rui', UGi', URi', Updi',CRi', UKi, ULi, UNi, RAN'', UKi'',ULi'', UQ, UP, UW, SKu-cs'', RANcs'',RANcs,Tui ;
+const ADD: Function;
 protocol Major2(User,CloudServer) 
 { 
 role User
