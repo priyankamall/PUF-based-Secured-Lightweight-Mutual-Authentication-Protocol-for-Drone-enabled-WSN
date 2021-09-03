@@ -63,7 +63,7 @@ send_!2(CloudServer,User,URi,UAi,CRi); #Cloud server sends parameters to the use
                                         #encypted/offline channel mode
 recv_!3(User,CloudServer,IDi,UCi,ULi,UNi,Tui); #User receives parameters from the cloud server
                                                 #via open channel
-fresh URi'':Nonce; 
+fresh URi'':Nonce; #URi’’ is a randomly chosen value
 macro RAN''= XOR(UNi, H(IDcs,URi''));
 macro UKi''= H(IDcs, SN, UCi); 
 macro ULi'= H(IDi'',UKi'',CRi, RAN'', Tui'', URi''); 
