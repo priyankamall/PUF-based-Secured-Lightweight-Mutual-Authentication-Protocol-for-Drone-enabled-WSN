@@ -52,7 +52,7 @@ claim(User,Secret,RAN);#verify the random number secrecy
 claim(User,Secret,Pdi); #Checks whether the common key Pdi is secret
 claim(User,Secret,SKu-cs''); #session key secrecy verification
 }
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 role CloudServer 
 {
 const Sc,UCi,CRi; 
