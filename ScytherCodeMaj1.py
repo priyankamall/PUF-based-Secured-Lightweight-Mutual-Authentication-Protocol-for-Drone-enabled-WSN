@@ -9,6 +9,7 @@ RRj,RRj', Rd', SKs-d', Cd',V ;
 const ADD:Function;
 protocol Major1(SensorNode, Drone, CloudServer)
 {
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 role SensorNode 
 {
 const IDs; #sensor node identity
