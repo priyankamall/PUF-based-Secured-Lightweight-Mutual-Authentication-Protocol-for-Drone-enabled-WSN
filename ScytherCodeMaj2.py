@@ -81,5 +81,4 @@ claim(CloudServer,Niagree); #check non-injective agreement
 claim(CloudServer,Nisynch); #check non-injective synchronization
 claim(CloudServer,Secret,RANcs);#random number secrecy
 claim(CloudServer,Secret,SKu-cs); #Checks whether the common key SKu-cs is secret
-}
-}
+}}
