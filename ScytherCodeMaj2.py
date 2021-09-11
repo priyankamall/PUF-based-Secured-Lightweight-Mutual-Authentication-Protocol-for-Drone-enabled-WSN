@@ -31,7 +31,7 @@ macro UGi= H(IDi,Pdi,Rui);
 macro Rui'= XOR(UFi, H(XOR(IDi',Pdi',UCi))); 
 macro UGi'= H(IDi', Pdi', Rui');
 match(UGi', UGi);  
-fresh RAN:Nonce;#RAN is a randomly chosen value
+fresh RAN:Nonce; #RAN is a randomly chosen value
 macro URi'= XOR(Udi,Pdi'); 
 macro Updi'= H(Pdi',Rui'); 
 macro CRi'= XOR(UEi, H(IDi',Pdi'));
