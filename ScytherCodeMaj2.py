@@ -11,6 +11,7 @@ RANcs,Tui ;
 const ADD: Function;
 protocol Major2(User,CloudServer) #authentication procedure between the User and the Cloud Server
 { 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 role User
 { 
 fresh Rui,UCi: Nonce;#UCi Challenges
