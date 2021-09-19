@@ -10,6 +10,7 @@ L', P, U, Q, Q', SKes-d',
 RMj', Rj', Cd, Ed, Fd, LRj,LRj',
 RRj,RRj', Rd', SKs-d', Cd',V ;
 const ADD:Function;
+  
 protocol Major1(SensorNode, Drone, CloudServer)
 {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
