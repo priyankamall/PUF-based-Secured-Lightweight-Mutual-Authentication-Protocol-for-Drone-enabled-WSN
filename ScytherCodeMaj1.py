@@ -4,6 +4,7 @@ Timestamp, PUF, SK;
 
 hashfunction H;
 const ADD:Function;
+  
 const IDd, IDs, IDcs, SN, T,
 Kd, Aj, Bj, Tj, IDsj, Cj, 
 L,N, Td, Tcs, Kd', RMd', RMd,
