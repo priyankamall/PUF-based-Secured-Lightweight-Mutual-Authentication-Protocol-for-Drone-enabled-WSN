@@ -1,7 +1,6 @@
 usertype Timestamp,PUF,SK; 
 #SK : Secret Key
 hashfunction H;
-
 const XOR:Function;
 const ADD:Function;
 const MUL:Function;
