@@ -1,6 +1,7 @@
 usertype 
 Timestamp, PUF, SK;
 #SK is the secret key
+
 hashfunction H;
 const IDd, IDs, IDcs, SN, T,
 Kd, Aj, Bj, Tj, IDsj, Cj, 
