@@ -1,6 +1,5 @@
 usertype 
-Timestamp, PUF, SK;
-#SK is the secret key
+Timestamp, PUF, SK;#SK is the secret key
 hashfunction H;
 const ADD:Function; 
 const IDd, IDs, IDcs, SN, T,
