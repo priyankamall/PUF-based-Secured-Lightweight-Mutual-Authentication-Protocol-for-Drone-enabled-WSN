@@ -8,7 +8,6 @@ L,N, Td, Tcs, Kd', RMd', RMd,
 L', P, U, Q, Q', SKes-d',
 RMj', Rj', Cd, Ed, Fd, LRj,LRj',
 RRj,RRj', Rd', SKs-d', Cd',V ;
-  
 protocol Major1(SensorNode, Drone, CloudServer)
 {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
