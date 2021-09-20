@@ -82,4 +82,4 @@ claim(CloudServer,Secret, Rcs);
 claim_CloudServer(CloudServer,Secret, SKes-d); 
 #Checks whether the common key SKes-d is secret
 }
-                        }
+}
