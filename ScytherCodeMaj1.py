@@ -78,7 +78,7 @@ macro Q = H(IDd, IDcs, Rcs, SKes-d, Tcs);
 send_!3(CloudServer, Drone, P,Q,V,Tcs); #cloud server sends parameters to the drone
 claim(CloudServer, Niagree); #non-injective agreement 
 claim (CloudServer, Nisynch); #Non-injective synchronization
-claim(CloudServer,Secret, Rcs); 
+claim(CloudServer,Secret, Rcs); #checks the secrecy of the cloud server random number
 claim_CloudServer(CloudServer,Secret, SKes-d);#Checks whether the common key SKes-d is secret
 }
 }
