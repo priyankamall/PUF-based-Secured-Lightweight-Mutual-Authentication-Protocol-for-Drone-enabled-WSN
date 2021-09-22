@@ -54,7 +54,7 @@ macro Ed = XOR(SKs-d, H(IDsj, RRj));
 macro Fd = XOR(Rd, H(IDsj, LRj));
 send_!4(Drone, SensorNode, IDd, Cd, Ed, Fd); #Drone sends parameters to the sensor node
 claim(SensorNode, Niagree); #non-injective agreement
-claim (Drone, Nisynch);#Non-injective synchronization
+claim (Drone, Nisynch); #Non-injective synchronization
 claim(Drone,Secret, Rd);
 claim(Drone,Secret, RMd); 
 claim (Drone,Secret, SKs-d);#Checks whether the common key SKs-d is secret
