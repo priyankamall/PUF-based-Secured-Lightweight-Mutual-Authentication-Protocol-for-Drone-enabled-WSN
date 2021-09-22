@@ -71,7 +71,7 @@ fresh SKes-d: Nonce; #SKes-d is randomly chosen
 macro kd' = H(IDd, IDcs, SN, T); 
 macro RMd' = XOR(N, H(IDcs, Kd')); 
 macro L' = H(IDd, Kd', RMd', Td);
-match (L', L);#If the condition is true then the Drone is registered and authenticated
+match (L', L); #If the condition is true then the Drone is registered and authenticated
 macro P = XOR(Rcs, H(IDd, RMd')); 
 macro V = XOR(SKes-d, H(IDd, Kd', Tcs));
 macro Q = H(IDd, IDcs, Rcs, SKes-d, Tcs); 
