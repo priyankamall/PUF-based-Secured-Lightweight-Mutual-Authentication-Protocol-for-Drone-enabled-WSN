@@ -60,7 +60,7 @@ const IDcs;
 var Rui,UCi: Nonce; 
 var RAN:Nonce; 
 recv_!1(User, CloudServer, IDi,Updi,UCi); #User receives parameters from the cloud server
-                                          #open channel
+#open channel
 fresh URi,CRi: Nonce; 
 macro UAi= XOR(H(IDcs, SN, UCi), H(IDi,Updi,CRi)); 
 send_!2(CloudServer,User,URi,UAi,CRi); #Cloud server sends parameters to the user
