@@ -21,7 +21,7 @@ var URi'':Nonce;
 var RANcs,SKu-cs:Nonce; 
 macro Updi = H(Pdi, Rui); 
 send_!1(User,CloudServer, IDi,Updi,UCi);#User sends parameters to the cloud server
-                                        #via open channel
+#via open channel
 recv_!2(CloudServer,User,URi,UAi,CRi); #Cloud server receives parameters from the user
                                         #via offline / encrypted link
 macro UDi= XOR(URi,Pdi);
