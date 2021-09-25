@@ -39,7 +39,7 @@ macro UKi= XOR(UAi,H(IDi',Updi',CRi'));
 macro ULi= H(IDi,UKi,CRi',RAN,Tui,URi'); 
 macro UNi= XOR(RAN, H(IDcs,URi'));
 send_!3(User,CloudServer,IDi,UCi,ULi,UNi,Tui); #User sends parameters to the cloud server
-                                                #via open channel
+#via open channel
 recv_!4(CloudServer,User, UQ,UP,UW,Tcs); #Cloud server receives parameters from the user
 macro SKu-cs''=XOR(UQ,H(IDi,URi,RAN)); #session key between user and cloud server
 macro RANcs''= XOR(UW,RAN);
