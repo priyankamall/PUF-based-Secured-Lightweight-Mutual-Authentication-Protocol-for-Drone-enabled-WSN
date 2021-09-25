@@ -23,7 +23,7 @@ macro Updi = H(Pdi, Rui);
 send_!1(User,CloudServer, IDi,Updi,UCi);#User sends parameters to the cloud server
 #via open channel
 recv_!2(CloudServer,User,URi,UAi,CRi); #Cloud server receives parameters from the user
-                                        #via offline / encrypted link
+#via offline / encrypted link
 macro UDi= XOR(URi,Pdi);
 macro UEi= XOR(CRi, H(IDi,Pdi));
 macro UFi= XOR(Rui, H(XOR(IDi, Pdi,UCi))); 
