@@ -65,7 +65,7 @@ fresh URi,CRi: Nonce;
 macro UAi= XOR(H(IDcs, SN, UCi), H(IDi,Updi,CRi)); 
 send_!2(CloudServer,User,URi,UAi,CRi); #Cloud server sends parameters to the user
 #encypted/offline channel mode
-                                        #sends the concatenated values to the User
+#sends the concatenated values to the User
 recv_!3(User,CloudServer,IDi,UCi,ULi,UNi,Tui); #User receives parameters from the cloud server
                                                 #via open channel
 fresh URi'':Nonce; #URi’’ is a randomly chosen value
