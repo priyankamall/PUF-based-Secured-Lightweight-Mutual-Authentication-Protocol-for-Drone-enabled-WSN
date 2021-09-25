@@ -15,7 +15,7 @@ protocol Major2(User,CloudServer) #authentication procedure between the User and
 role User
 { 
 fresh Rui,UCi: Nonce;#UCi Challenges
-                     #Rui, UCi is a randomly chosen value
+#Rui, UCi is a randomly chosen value
 var URi,CRi: Nonce; #CRi random number
 var URi'':Nonce;
 var RANcs,SKu-cs:Nonce; 
