@@ -48,7 +48,7 @@ claim(User, Niagree); #check non-injective agreement
 claim(User, Nisynch); #check non-injective synchronization
 claim(User,Secret,Rui); 
 claim(User,Secret,UCi); 
-claim(User,Secret,RAN);#verify the random number secrecy 
+claim(User,Secret,RAN); #verify the random number secrecy 
 claim(User,Secret,Pdi); #Checks whether the common key Pdi is secret
 claim(User,Secret,SKu-cs''); #session key secrecy verification
 }                     
